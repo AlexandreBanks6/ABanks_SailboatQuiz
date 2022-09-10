@@ -1,0 +1,3 @@
+[submodule "c-cpp/cutest"]
+	path = c-cpp/cutest
+	url = https://github.com/ennorehling/cutest
