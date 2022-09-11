@@ -9,7 +9,14 @@
  * @return float: The bounded angle in degrees.
  */
 float bound_to_180(float angle) {
-    return 0;
+    if (angle < -180) {
+        angle = -180;
+    }
+    if (angle > 179) {
+        angle = 179;
+    }
+
+    return angle;
 }
 
 /**
@@ -21,5 +28,11 @@ float bound_to_180(float angle) {
  * @return bool: TRUE when `middle_angle` is not in the reflex angle of `first_angle` and `second_angle`, FALSE otherwise
  */
 bool is_angle_between(float first_angle, float middle_angle, float second_angle) {
-    return true;
+    int val = false;
+
+    if ((first_angle < middle_angle) && (middle_angle < second_angle)) {
+        val = true;
+    }
+
+    return val;
 }

@@ -9,7 +9,7 @@ void test_bound_basic1(CuTest *tc) {
 
 /**************** Tests for is_angle_between() *******************/
 void test_between_basic1(CuTest *tc) {
-    CuAssertTrue(tc, is_angle_between(0, 1, 2));
+    CuAssertTrue(tc, is_angle_between(2, 1, 2));
 }
 
 int main(int argc, char const *argv[]) {
@@ -23,6 +23,7 @@ int main(int argc, char const *argv[]) {
     CuSuiteSummary(suite, output);
     CuSuiteDetails(suite, output);
     printf("%s\n", output->buffer);
-
+    printf("Check");
     return suite->failCount > 0 ? 1 : 0;
+    
 }
